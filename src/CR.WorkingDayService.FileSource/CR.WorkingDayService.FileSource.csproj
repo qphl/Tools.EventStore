@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <Authors>Cognisant</Authors>
+    <Product>CR.WorkingDayService</Product>
+    <Description>The File Working Day Source package for a Working Day Service - a tool which provides information about working &amp; non-working days based on a range of rules and sources.</Description>
+    <Copyright>Cognisant 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/cognisant/cr-workingdayservice/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/cognisant/cr-workingdayservice</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/cognisant/cr-workingdayservice/blob/master/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/cognisant/cr-workingdayservice</RepositoryUrl>
+    <PackageTags>Cognisant, Working Day</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>bin\Debug\netstandard1.0\CR.WorkingDayService.Builder.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>bin\Release\netstandard1.0\CR.WorkingDayService.Builder.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CR.CodeStyle.CSharp.Full" Version="1.0.1" />
+    <PackageReference Include="System.IO.FileSystem.Watcher" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CR.WorkingDayService.StringSource\CR.WorkingDayService.StringSource.csproj" />
+    <ProjectReference Include="..\CR.WorkingDayService\CR.WorkingDayService.csproj" />
+  </ItemGroup>
+
+</Project>
