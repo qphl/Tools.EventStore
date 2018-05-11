@@ -28,5 +28,75 @@ namespace CR.WorkingDayService
         /// If there are not IWorkingDaySources registered, all days are considered Working Days.
         /// </summary>
         public bool IsWorkingDay(DateTime date) => _sources == null || _sources.Count == 0 || _sources.All(source => source.IsWorkingDay(date));
+
+        /// <summary>
+        /// Gets the Next Working Day from the provided DateTime.
+        /// </summary>
+        /// <param name="date">The DateTime to count from.</param>
+        /// <returns>The next Working Day after the provided DateTime.</returns>
+        public DateTime NextWorkingDay(DateTime date)
+        {
+            do
+            {
+                date = date.AddDays(1);
+            }
+            while (this.IsNonWorkingDay(date));
+            return date;
+        }
+
+        /// <summary>
+        /// Gets the Previous Working Day from the provided DateTime.
+        /// </summary>
+        /// <param name="date">The DateTime to count from.</param>
+        /// <returns>The last Working Day before the provided DateTime.</returns>
+        public DateTime PreviousWorkingDay(DateTime date)
+        {
+            do
+            {
+                date = date.AddDays(-1);
+            }
+            while (this.IsNonWorkingDay(date));
+            return date;
+        }
+
+        /// <summary>
+        /// Add the specified number of working days to the provided DateTime.
+        /// </summary>
+        /// <param name="numberToAdd">The number of working days to add.</param>
+        /// <param name="date">The DateTime to add working days to.</param>
+        /// <returns>A DateTime equal to the original DateTime plus however many days need to pass before the specified number of working days have passed.</returns>
+        public DateTime AddWorkingDays(uint numberToAdd, DateTime date)
+        {
+            for (var i = 0; i < numberToAdd; i++)
+            {
+                do
+                {
+                    date = date.AddDays(1);
+                }
+                while (this.IsNonWorkingDay(date));
+            }
+
+            return date;
+        }
+
+        /// <summary>
+        /// Subtract the specified number of working days from the provided DateTime.
+        /// </summary>
+        /// <param name="numberToSubtract">The number of working days to subtract.</param>
+        /// <param name="date">The DateTime to subtract working days from.</param>
+        /// <returns>A DateTime equal to the original DateTime minus however many days have passed since it was the specified number of working days away from the provided DateTime.</returns>
+        public DateTime SubtractWorkingDays(uint numberToSubtract, DateTime date)
+        {
+            for (var i = 0; i < numberToSubtract; i++)
+            {
+                do
+                {
+                    date = date.AddDays(-1);
+                }
+                while (this.IsNonWorkingDay(date));
+            }
+
+            return date;
+        }
     }
 }
