@@ -2,7 +2,7 @@
 // Copyright (c) Cognisant. All rights reserved.
 // </copyright>
 
-namespace CR.WorkingDayService.Builder
+namespace CR.WorkingDayService
 {
     using System.Collections.Generic;
     using System.Linq;

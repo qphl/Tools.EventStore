@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CR.WorkingDayService", "CR.WorkingDayService\CR.WorkingDayService.csproj", "{92832210-9830-4C9C-A9EA-421F30DF49C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CR.WorkingDayService.Builder", "CR.WorkingDayService.Builder\CR.WorkingDayService.Builder.csproj", "{7D1207EE-6B79-4C3E-9E1C-D48716BCD243}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CR.WorkingDayService.DayOfWeekSource", "CR.WorkingDayService.DayOfWeekSource\CR.WorkingDayService.DayOfWeekSource.csproj", "{F387F85B-2280-4A8F-A70C-8A3E509C8198}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{92832210-9830-4C9C-A9EA-421F30DF49C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92832210-9830-4C9C-A9EA-421F30DF49C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92832210-9830-4C9C-A9EA-421F30DF49C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D1207EE-6B79-4C3E-9E1C-D48716BCD243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D1207EE-6B79-4C3E-9E1C-D48716BCD243}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D1207EE-6B79-4C3E-9E1C-D48716BCD243}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D1207EE-6B79-4C3E-9E1C-D48716BCD243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F387F85B-2280-4A8F-A70C-8A3E509C8198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F387F85B-2280-4A8F-A70C-8A3E509C8198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F387F85B-2280-4A8F-A70C-8A3E509C8198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F387F85B-2280-4A8F-A70C-8A3E509C8198}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

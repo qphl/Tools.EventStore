@@ -4,7 +4,7 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <Authors>Cognisant</Authors>
     <Product>CR.WorkingDayService</Product>
-    <Description>The Builder package for a Working Day Service - a tool which provides information about working &amp; non-working days based on a range of rules and sources.</Description>
+    <Description>The Day-Of-The-Week Working Day Source package for a Working Day Service - a tool which provides information about working &amp; non-working days based on a range of rules and sources.</Description>
     <Copyright>Cognisant 2018</Copyright>
     <PackageLicenseUrl>https://github.com/cognisant/cr-workingdayservice/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/cognisant/cr-workingdayservice</PackageProjectUrl>
