@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CR.WorkingDayService.HttpSo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CR.WorkingDayService.StringSource", "CR.WorkingDayService.StringSource\CR.WorkingDayService.StringSource.csproj", "{391E1F2A-CF97-4D51-B2B3-A86CCF21D198}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CR.WorkingDayService.GovUkJsonSource", "CR.WorkingDayService.GovUkJsonSource\CR.WorkingDayService.GovUkJsonSource.csproj", "{EE1B03AF-A6B4-4957-B682-F97110C3BA29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{391E1F2A-CF97-4D51-B2B3-A86CCF21D198}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{391E1F2A-CF97-4D51-B2B3-A86CCF21D198}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{391E1F2A-CF97-4D51-B2B3-A86CCF21D198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE1B03AF-A6B4-4957-B682-F97110C3BA29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1B03AF-A6B4-4957-B682-F97110C3BA29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1B03AF-A6B4-4957-B682-F97110C3BA29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1B03AF-A6B4-4957-B682-F97110C3BA29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
