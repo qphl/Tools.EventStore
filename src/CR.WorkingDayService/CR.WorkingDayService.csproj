@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Cognisant</Authors>
+    <Company>Cognisant</Company>
+    <Description>A tool which provides information about working &amp; non-working days based on a range of rules and sources.</Description>
+    <Copyright>Cognisant 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/cognisant/cr-workingdayservice/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/cognisant/cr-workingdayservice</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/cognisant/cr-workingdayservice</RepositoryUrl>
+    <PackageIconUrl>https://github.com/cognisant/cr-workingdayservice/blob/master/logo.png</PackageIconUrl>
+    <PackageTags>Event Store, Event Sourcing, Cognisant</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>bin\Debug\netstandard2.0\CR.EventStoreTools.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>bin\Release\netstandard2.0\CR.EventStoreTools.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CR.CodeStyle.CSharp.Full" Version="1.0.1" />
+  </ItemGroup>
+
+</Project>
