@@ -34,13 +34,21 @@ namespace CR.WorkingDayService.GovUkJsonSource
         public static WorkingDayServiceBuilder AddGovUkBankHolidayJsonSource(this WorkingDayServiceBuilder builder, TimeSpan refreshTime)
             => builder.AddSource(GovUkBankHolidayJsonSource(refreshTime));
 
+        /// <summary>
+        /// The Parse method for UK Government Bank Holiday JSON.
+        /// </summary>
+        /// <param name="json">The JSON content.</param>
+        /// <returns>A list of Dates that are bank holidays (and therefore not working days).</returns>
+        public static List<DateTime> GovUkBankHolidayJsonParse(string json)
+        {
+            var jobject = JObject.Parse(json);
+            return jobject["england-and-wales"]["events"]?.Select(e => e["date"].ToObject<DateTime>().Date).ToList();
+        }
+
         private static IWorkingDaySource GovUkBankHolidayJsonSource(TimeSpan refreshTime) => new HttpWorkingDaySource<List<DateTime>>(
             new HttpRequestMessage(HttpMethod.Get, "https://www.gov.uk/bank-holidays.json"),
-            json =>
-            {
-                var jobject = JObject.Parse(json);
-                return jobject["england-and-wales"]["events"]?.Select(e => DateTime.Parse(e["date"].ToObject<string>())).ToList();
-            }, (dateTime, list) => !list.Contains(dateTime.Date),
+            GovUkBankHolidayJsonParse,
+            (dateTime, list) => !list.Contains(dateTime.Date),
             refreshTime);
     }
 }
