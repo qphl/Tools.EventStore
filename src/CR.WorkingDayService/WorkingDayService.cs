@@ -24,10 +24,10 @@ namespace CR.WorkingDayService
 
         /// <inheritdoc />
         /// <summary>
-        /// Checks all of the registered IWorkingDaySources and returns true if all of them say that the provided DateTime is on a Working Day.
+        /// Checks the registered IWorkingDaySources and returns true if any of them say that the provided DateTime is on a Working Day.
         /// If there are not IWorkingDaySources registered, all days are considered Working Days.
         /// </summary>
-        public bool IsWorkingDay(DateTime date) => _sources == null || _sources.Count == 0 || _sources.All(source => source.IsWorkingDay(date));
+        public bool IsWorkingDay(DateTime date) => _sources == null || _sources.Count == 0 || _sources.Any(source => source.IsWorkingDay(date));
 
         /// <summary>
         /// Gets the Next Working Day from the provided DateTime.
