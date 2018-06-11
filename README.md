@@ -1,4 +1,4 @@
-cr-workingdayservice
+cr-es-tools
 ======================
 
-A Library for a Tool which provides information about Working & Non-Working Days based on a range of sources and rules.
+A Library containing low-level tools for working with EventStore.
