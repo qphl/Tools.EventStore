@@ -2,8 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Cr.EventStoreTools</AssemblyName>
-    <RootNamespace>Cr.EventStoreTools</RootNamespace>
+    <AssemblyName>CR.Tools.EventStore</AssemblyName>
+    <RootNamespace>CR.Tools.EventStore</RootNamespace>
+    <Product>CR.Tools</Product>
+    <Company>Cognisant Research</Company>
+    <Authors>Cognisant Research</Authors>
+    <Description>Common low-level tools for working with EventStore.</Description>
+    <Copyright>Cognisant Research 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/cognisant/Tools.EventStore/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/cognisant/Tools.EventStore</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/cognisant/Tools.EventStore/blob/master/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/cognisant/Tools.EventStore</RepositoryUrl>
+    <PackageTags>EventStore, Cognisant</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

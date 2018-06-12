@@ -2,10 +2,10 @@
 // Copyright (c) Cognisant. All rights reserved.
 // </copyright>
 
-namespace Cr.EventStoreTools
+namespace CR.Tools.EventStore
 {
     using System;
-    using EventStore.ClientAPI;
+    using global::EventStore.ClientAPI;
 
     /// <summary>
     /// A helper class for quickly building an <see cref="IEventStoreConnection"/>.
