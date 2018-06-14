@@ -14,7 +14,7 @@
     <PackageIconUrl>https://github.com/cognisant/Tools.EventStore/blob/master/logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/cognisant/Tools.EventStore</RepositoryUrl>
     <PackageTags>EventStore, Cognisant</PackageTags>
-    <PackageReleaseNotes>https://GitHub.com/Cognisant/Tools.EventStore/releases/tag/$(Version)</PackageReleaseNotes>
+    <PackageReleaseNotes>https://GitHub.com/Cognisant/Tools.EventStore/releases/tag/$(Tag)</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
