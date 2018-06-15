@@ -30,8 +30,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CR.CodeStyle.CSharp.Full" Version="1.0.1" />
-    <PackageReference Include="EventStore.ClientAPI.NetCore" Version="4.1.0.23" />
+    <PackageReference Include="CR.CodeStyle.CSharp.Full" Version="1.0.1">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="EventStore.ClientAPI.NetCore" Version="4.1.0.23">
+      <PrivateAssets></PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
