@@ -2,11 +2,11 @@
 // Copyright (c) Cognisant. All rights reserved.
 // </copyright>
 
-namespace Cr.EventStoreTools
+namespace CR.Tools.EventStore
 {
     using System;
     using System.Text;
-    using EventStore.ClientAPI;
+    using global::EventStore.ClientAPI;
     using Newtonsoft.Json;
 
     /// <summary>
