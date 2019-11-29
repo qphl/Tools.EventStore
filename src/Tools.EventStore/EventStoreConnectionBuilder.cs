@@ -1,8 +1,8 @@
-﻿// <copyright file="EventStoreConnectionBuilder.cs" company="Cognisant">
-// Copyright (c) Cognisant. All rights reserved.
+﻿// <copyright file="EventStoreConnectionBuilder.cs" company="Corsham Science">
+// Copyright (c) Corsham Science. All rights reserved.
 // </copyright>
 
-namespace CR.Tools.EventStore
+namespace CorshamScience.Tools.EventStore
 {
     using System;
     using global::EventStore.ClientAPI;

@@ -2,38 +2,38 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>CR.Tools.EventStore</AssemblyName>
-    <RootNamespace>CR.Tools.EventStore</RootNamespace>
-    <Product>CR.Tools</Product>
-    <Company>Cognisant Research</Company>
-    <Authors>Cognisant Research</Authors>
+    <AssemblyName>CorshamScience.Tools.EventStore</AssemblyName>
+    <RootNamespace>CorshamScience.Tools.EventStore</RootNamespace>
+    <Product>CorshamScience.Tools</Product>
+    <Company>Corsham Science</Company>
+    <Authors>Corsham Science</Authors>
     <Description>Common low-level tools for working with EventStore.</Description>
-    <Copyright>Cognisant Research 2018</Copyright>
-    <PackageLicenseUrl>https://github.com/cognisant/Tools.EventStore/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/cognisant/Tools.EventStore</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/cognisant/Tools.EventStore/master/logo.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/cognisant/Tools.EventStore</RepositoryUrl>
-    <PackageTags>EventStore, Cognisant</PackageTags>
-    <PackageReleaseNotes>https://GitHub.com/Cognisant/Tools.EventStore/releases/tag/$(Tag)</PackageReleaseNotes>
+    <Copyright>Corsham Science 2019</Copyright>
+    <PackageLicense>https://github.com/qphl/Tools.EventStore/blob/master/LICENSE</PackageLicense>
+    <PackageProjectUrl>https://github.com/qphl/Tools.EventStore</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/qphl/Tools.EventStore/master/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/qphl/Tools.EventStore</RepositoryUrl>
+    <PackageTags>EventStore, QPHL</PackageTags>
+    <PackageReleaseNotes>https://GitHub.com/qphl/Tools.EventStore/releases/tag/$(Tag)</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Debug\netstandard2.0\CR.Tools.EventStore.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\CorshamScience.Tools.EventStore.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard2.0\CR.Tools.EventStore.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\CorshamScience.Tools.EventStore.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CR.CodeStyle.CSharp.Full" Version="[1.0.1,2.0.0-0)">
+    <PackageReference Include="CorshamScience.CodeStyle.CSharp.Full" Version="3.0.0">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="EventStore.Client" Version="[5.0.1,6.0.0-a)" />
+    <PackageReference Include="EventStore.Client" Version="5.0.5" />
   </ItemGroup>
 
 </Project>
