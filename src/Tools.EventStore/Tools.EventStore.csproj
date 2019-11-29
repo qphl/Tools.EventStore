@@ -15,6 +15,8 @@
     <RepositoryUrl>https://github.com/qphl/Tools.EventStore</RepositoryUrl>
     <PackageTags>EventStore, QPHL</PackageTags>
     <PackageReleaseNotes>https://GitHub.com/qphl/Tools.EventStore/releases/tag/$(Tag)</PackageReleaseNotes>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+    <PackageIcon>Logo.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -34,6 +36,13 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="EventStore.Client" Version="5.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Logo.png">
+      <PackagePath></PackagePath>
+      <Pack>True</Pack>
+    </None>
   </ItemGroup>
 
 </Project>
