@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>CorshamScience.Tools.EventStore</AssemblyName>
     <RootNamespace>CorshamScience.Tools.EventStore</RootNamespace>
     <Product>CorshamScience.Tools</Product>
@@ -35,7 +35,9 @@
     <PackageReference Include="CorshamScience.CodeStyle.CSharp.Full" Version="3.0.0">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="EventStore.Client" Version="5.0.5" />
+    <PackageReference Include="EventStore.Client.Grpc" Version="22.0.0" />
+    <PackageReference Include="EventStore.Client.Grpc.Streams" Version="22.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
