@@ -6,11 +6,11 @@ namespace CorshamScience.Tools.EventStore
 {
     using System;
     using System.Text;
-    using global::EventStore.ClientAPI;
+    using global::EventStore.Client;
     using Newtonsoft.Json;
 
     /// <summary>
-    /// A helper class containing methods to handle reading and writing events to/from an <see cref="IEventStoreConnection"/>.
+    /// A helper class containing methods to handle reading and writing events to/from an <see cref="EventStoreClient"/>.
     /// </summary>
     public static class EventStoreEventTools
     {
@@ -22,7 +22,7 @@ namespace CorshamScience.Tools.EventStore
         /// <param name="serializerSettings">Optional <see cref="JsonSerializerSettings"/> to use when serializing the provided <see cref="object"/> and the event metadata.</param>
         /// <returns>A new <see cref="EventData"/> object with the provided ID, and serialized &amp; encoded JSON data, as well as metadata containing the assembly qualified name for the event <see cref="object"/>.</returns>
         // ReSharper disable once UnusedMember.Global
-        public static EventData ToEventData(Guid eventId, object @event, JsonSerializerSettings serializerSettings = null)
+        public static EventData ToEventData(Uuid eventId, object @event, JsonSerializerSettings serializerSettings = null)
         {
             var data = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(@event, serializerSettings));
             var eventHeaders = new { ClrType = @event.GetType().AssemblyQualifiedName };
@@ -30,7 +30,7 @@ namespace CorshamScience.Tools.EventStore
             var metadata = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(eventHeaders, serializerSettings));
             var typeName = @event.GetType().Name;
 
-            return new EventData(eventId, typeName, true, data, metadata);
+            return new EventData(eventId, typeName, data, metadata);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace CorshamScience.Tools.EventStore
         /// <returns>An <see cref="object"/> of the provided <see cref="Type"/> build from the JSON data contained in the provided <see cref="ResolvedEvent"/>.</returns>
         public static object FromResolvedEvent(ResolvedEvent @event, Type typeToConvertTo, JsonSerializerSettings serializerSettings = null)
         {
-            var eventString = Encoding.UTF8.GetString(@event.Event.Data);
+            var eventString = Encoding.UTF8.GetString(@event.Event.Data.Span);
             return JsonConvert.DeserializeObject(eventString, typeToConvertTo, serializerSettings);
         }
     }
